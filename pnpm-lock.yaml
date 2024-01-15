@@ -21,11 +21,8 @@ importers:
         specifier: latest
         version: 1.11.3
 
-  apps/docs:
+  apps/config-service:
     dependencies:
-      '@splash/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       next:
         specifier: ^14.0.4
         version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -69,6 +66,9 @@ importers:
       '@splash/database':
         specifier: workspace:*
         version: link:../../packages/database
+      '@splash/render':
+        specifier: workspace:*
+        version: link:../../packages/render
       '@splash/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -149,6 +149,39 @@ importers:
       eslint-plugin-only-warn:
         specifier: ^1.1.0
         version: 1.1.0
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  packages/render:
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@turbo/gen':
+        specifier: ^1.11.3
+        version: 1.11.3(@types/node@20.10.6)(typescript@5.3.3)
+      '@types/eslint':
+        specifier: ^8.56.1
+        version: 8.56.1
+      '@types/node':
+        specifier: ^20.10.6
+        version: 20.10.6
+      '@types/react':
+        specifier: ^18.2.46
+        version: 18.2.46
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.2.18
+      eslint:
+        specifier: ^8.56.0
+        version: 8.56.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -780,7 +813,7 @@ packages:
     dev: true
 
   /@types/eslint@8.56.1:
-    resolution: {integrity: sha512-18PLWRzhy9glDQp3+wOgfLYRWlhgX0azxgJ63rdpoUHyrC9z0f5CkFburjQx4uD7ZCruw85ZtMt6K+L+R8fLJQ==}
+    resolution: {integrity: sha512-18PLWRzhy9glDQp3+wOgfLYRWlhgX0azxgJ63rdpoUHyrC9z0f5CkFburjQx4uD7ZCruw85ZtMt6K+L+R8fLJQ==, tarball: https://registry.npmmirror.com/@types/eslint/-/eslint-8.56.1.tgz}
     dependencies:
       '@types/estree': 1.0.5
       '@types/json-schema': 7.0.12
@@ -2194,8 +2227,9 @@ packages:
     dev: true
 
   /eslint@8.56.0:
-    resolution: {integrity: sha512-Go19xM6T9puCOWntie1/P997aXxFsOi37JIHRWI514Hc6ZnaHGKY9xFhrU65RT6CcBEzZoGG1e6Nq+DT04ZtZQ==}
+    resolution: {integrity: sha512-Go19xM6T9puCOWntie1/P997aXxFsOi37JIHRWI514Hc6ZnaHGKY9xFhrU65RT6CcBEzZoGG1e6Nq+DT04ZtZQ==, tarball: https://registry.npmmirror.com/eslint/-/eslint-8.56.0.tgz}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    hasBin: true
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
       '@eslint-community/regexpp': 4.10.0
@@ -3335,7 +3369,7 @@ packages:
     dev: true
 
   /next@14.0.4(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qbwypnM7327SadwFtxXnQdGiKpkuhaRLE2uq62/nRul9cj9KhQ5LhHmlziTNqUidZotw/Q1I9OjirBROdUJNgA==}
+    resolution: {integrity: sha512-qbwypnM7327SadwFtxXnQdGiKpkuhaRLE2uq62/nRul9cj9KhQ5LhHmlziTNqUidZotw/Q1I9OjirBROdUJNgA==, tarball: https://registry.npmmirror.com/next/-/next-14.0.4.tgz}
     engines: {node: '>=18.17.0'}
     hasBin: true
     peerDependencies:

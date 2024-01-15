@@ -1,0 +1,14 @@
+{
+  "type": "div",
+  "children": [
+    {
+      "type": "button",
+      "class": "5"
+    },
+    {
+      "type": "label",
+      "class": "w-2",
+      "children": "2"
+    }
+  ]
+}

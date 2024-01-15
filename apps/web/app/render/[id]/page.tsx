@@ -1,24 +1,35 @@
-"use server";
-import Image from "next/image";
-import { promises as fs } from "fs";
-import dynamic from "next/dynamic";
-import FormItem from "./_component/form-item";
-const RenderPage = async ({ params }) => {
-  //   const res = await fetch("@/data/fpp.json");
-  //   console.log(res);
-  const file = await fs.readFile(
-    process.cwd() + "/public/data/fpp.json",
-    "utf8"
-  );
-  const json = await import("../../../public/data/foo");
+import { revalidateTag } from "next/cache";
+import FormItem from "./_component/reset-button";
+import Late from "./_component/late";
+import { resolve } from "path";
+import { Suspense } from "react";
+import { Card } from "@splash/render";
+// import FormItem from "./_component/form-item";
 
-  console.log(json);
+const RenderPage = async ({ params }) => {
+  console.log(params.id);
+  const res = await fetch(
+    "http://localhost:3001/api/config-json/" + params.id,
+    {
+      // cache: "no-store",
+      next: {
+        tags: ["config"],
+        revalidate: 60,
+      },
+    }
+  );
+  const json = await res.json();
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
   return (
     <div>
-      <Image src="/data/bg2.png" width="64" height="64" alt="mem" />
-      <pre>{params.id}</pre>
-      <></>
-      {/* {json.ctx.columns?.map((col) => <FormItem col={col} />)} */}
+      {JSON.stringify(json)}
+      <Suspense>
+        <Late />
+      </Suspense>
+      <FormItem />
+      <Card />
+      {/* <resetButton />
+      <resetButton /> */}
     </div>
   );
 };
