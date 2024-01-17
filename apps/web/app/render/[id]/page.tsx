@@ -1,20 +1,18 @@
-import { revalidateTag } from "next/cache";
-import FormItem from "./_component/reset-button";
+import ResetBtn from "./_component/reset-button";
+import FormItem from "./_component/form-item";
 import Late from "./_component/late";
-import { resolve } from "path";
 import { Suspense } from "react";
 import { Card } from "@splash/render";
 // import FormItem from "./_component/form-item";
 
-const RenderPage = async ({ params }) => {
+const RenderPage = async ({ params }: { params: any }) => {
   console.log(params.id);
   const res = await fetch(
-    "http://localhost:3001/api/config-json/" + params.id,
+    "http://localhost:7777/api/config-json/" + params.id,
     {
       // cache: "no-store",
       next: {
         tags: ["config"],
-        revalidate: 60,
       },
     }
   );
@@ -23,10 +21,9 @@ const RenderPage = async ({ params }) => {
   return (
     <div>
       {JSON.stringify(json)}
-      <Suspense>
-        <Late />
-      </Suspense>
-      <FormItem />
+      <Suspense fallback={<p>dddd....</p>}>{/* <Late /> */}</Suspense>
+      <FormItem ctx={json} />
+      <ResetBtn />
       <Card />
       {/* <resetButton />
       <resetButton /> */}

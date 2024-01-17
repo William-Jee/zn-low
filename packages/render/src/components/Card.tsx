@@ -1,7 +1,10 @@
-import react from "react";
-
+import { Button } from "@splash/ui";
 const Card = () => {
-  return <div>ss</div>;
+  return (
+    <div>
+      <Button appName="12">11</Button>
+    </div>
+  );
 };
 
 export default Card;

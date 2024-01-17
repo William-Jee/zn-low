@@ -1,14 +1,19 @@
 {
   "type": "div",
+  "data": {
+    "abc": "似懂非懂发2",
+    "test": "ggbb"
+  },
   "children": [
     {
       "type": "button",
-      "class": "5"
+      "class": "",
+      "children": "点击2"
     },
     {
       "type": "label",
       "class": "w-2",
-      "children": "2"
+      "children": "${(data)=>data.abc+'new2'} is ${test} here"
     }
   ]
 }
