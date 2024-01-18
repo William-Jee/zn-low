@@ -1,0 +1,15 @@
+{
+  "name": "@splash/configs",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    "./common.css": {
+      "import": "./tailwind/style.css",
+      "require": "./tailwind/style.css"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
