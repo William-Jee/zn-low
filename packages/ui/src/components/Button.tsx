@@ -1,5 +1,5 @@
-const Button = () => {
-  return <div className="text-red-400">wewe</div>;
+const Button = ({ children }: any) => {
+  return <div className="text-blue-400">{children}</div>;
 };
 
 export { Button };

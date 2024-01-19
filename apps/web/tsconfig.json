@@ -1,19 +1,5 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
-  "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "incremental": true,
-    "resolveJsonModule": true
-  },
+  "extends": "@splash/configs/typescript/nextjs.json",
   "include": [
     "next-env.d.ts",
     "next.config.js",
@@ -21,7 +7,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "incremental": true,
+    "resolveJsonModule": true
+  }
 }

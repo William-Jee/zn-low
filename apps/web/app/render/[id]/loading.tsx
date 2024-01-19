@@ -1,5 +1,5 @@
 function loading() {
-  return <div>....123</div>;
+  return <div className="12">....123</div>;
 }
 
 export default loading;

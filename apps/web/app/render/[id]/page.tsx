@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { Card } from "@splash/render";
 // import { Button } from "@splash/ui";
 import { Button } from "testui";
-import "../../globals.css";
+// import "../../globals.css";
 // import FormItem from "./_component/form-item";
 
 const RenderPage = async ({ params }: { params: any }) => {
@@ -27,10 +27,10 @@ const RenderPage = async ({ params }: { params: any }) => {
       <Suspense fallback={<p>dddd....</p>}>{/* <Late /> */}</Suspense>
       <FormItem ctx={json} />
       <ResetBtn />
-      {/* <Card /> */}
+      <Card />
       {/* <resetButton />
       <resetButton /> */}
-      <Button />
+      <Button sdf />
       <div className=" text-orange-600">1232</div>
     </div>
   );
