@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:packages/typescript-config
+        version: link:packages/dypescript-config
       prettier:
         specifier: ^3.1.1
         version: 3.1.1
@@ -35,7 +35,7 @@ importers:
         version: 14.0.4
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../packages/dypescript-config
       '@types/eslint':
         specifier: ^8.56.1
         version: 8.56.1
@@ -82,9 +82,9 @@ importers:
       '@splash/configs':
         specifier: workspace:*
         version: link:../../packages/configs
-      '@splash/esnew':
+      '@splash/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/eslint-new
+        version: link:../../packages/eslint-config
       '@types/eslint':
         specifier: ^8.56.1
         version: 8.56.1
@@ -116,29 +116,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/configs:
-    devDependencies:
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^6.17.0
-        version: 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.3.3)
-      '@typescript-eslint/parser':
-        specifier: ^6.17.0
-        version: 6.17.0(eslint@8.56.0)(typescript@5.3.3)
-      '@vercel/style-guide':
-        specifier: ^5.1.0
-        version: 5.1.0(eslint@8.56.0)(prettier@3.1.1)(typescript@5.3.3)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
-      eslint-config-turbo:
-        specifier: ^1.11.3
-        version: 1.11.3(eslint@8.56.0)
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
+  packages/configs: {}
 
   packages/database:
     dependencies:
@@ -148,7 +126,7 @@ importers:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../dypescript-config
       prisma:
         specifier: latest
         version: 5.8.0
@@ -156,31 +134,9 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/eslint-config:
-    devDependencies:
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^6.17.0
-        version: 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.3.3)
-      '@typescript-eslint/parser':
-        specifier: ^6.17.0
-        version: 6.17.0(eslint@8.56.0)(typescript@5.3.3)
-      '@vercel/style-guide':
-        specifier: ^5.1.0
-        version: 5.1.0(eslint@8.56.0)(prettier@3.1.1)(typescript@5.3.3)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
-      eslint-config-turbo:
-        specifier: ^1.11.3
-        version: 1.11.3(eslint@8.56.0)
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
+  packages/dypescript-config: {}
 
-  packages/eslint-new:
+  packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.17.0
@@ -234,13 +190,11 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/typescript-config: {}
-
   packages/ui:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../dypescript-config
       '@splash/configs':
         specifier: workspace:*
         version: link:../configs
@@ -292,7 +246,7 @@ importers:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../dypescript-config
       '@turbo/gen':
         specifier: ^1.11.3
         version: 1.11.3(@types/node@20.10.6)(typescript@5.3.3)
