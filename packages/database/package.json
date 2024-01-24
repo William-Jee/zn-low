@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "prisma": "latest",
-    "@repo/typescript-config": "workspace:*",
+    "@splash/configs": "workspace:*",
     "typescript": "^5.3.3"
   }
 }

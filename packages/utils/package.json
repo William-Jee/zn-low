@@ -1,0 +1,15 @@
+{
+  "name": "@splash/utils",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.1"
+  }
+}

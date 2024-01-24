@@ -5,9 +5,10 @@
     "next.config.js",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "tailwind.config.cjs"
   ],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "tailwind.config.cjs"],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "incremental": true,
