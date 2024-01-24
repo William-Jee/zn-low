@@ -9,7 +9,6 @@
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@splash/configs": "workspace:*",
     "@turbo/gen": "^1.11.3",

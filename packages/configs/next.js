@@ -26,9 +26,6 @@ module.exports = {
       },
     },
   },
-  rules: {
-    // "no-unused-vars": "off"
-  },
   ignorePatterns: [
     // Ignore dotfiles
     ".*.js",

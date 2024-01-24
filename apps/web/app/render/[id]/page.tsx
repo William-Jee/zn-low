@@ -1,15 +1,16 @@
 import ResetBtn from "./_component/reset-button";
 import FormItem from "./_component/form-item";
-import Late from "./_component/late";
 import { Suspense } from "react";
-import { Card } from "@splash/render";
 // import { Button } from "@splash/ui";
-import { Button } from "testui";
+import Late from "./_component/late";
+import { Card } from "@splash/render";
+
 // import "../../globals.css";
 // import FormItem from "./_component/form-item";
 
-const RenderPage = async ({ params }: { params: any }) => {
+const RenderPage = async ({ params }) => {
   console.log(params.id);
+
   const res = await fetch(
     "http://localhost:7777/api/config-json/" + params.id,
     {
@@ -27,10 +28,10 @@ const RenderPage = async ({ params }: { params: any }) => {
       <Suspense fallback={<p>dddd....</p>}>{/* <Late /> */}</Suspense>
       <FormItem ctx={json} />
       <ResetBtn />
-      <Card />
+      {/* <Card /> */}
       {/* <resetButton />
       <resetButton /> */}
-      <Button sdf />
+      {/* <Button sdf /> */}
       <div className=" text-orange-600">1232</div>
     </div>
   );
