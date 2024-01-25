@@ -1,3 +1,5 @@
+import { PageRender } from "@splash/render";
+
 const RenderPage = async ({ params }: { params: { id: string } }) => {
   console.log(process.env.JSON_SERVICE);
 
@@ -12,9 +14,8 @@ const RenderPage = async ({ params }: { params: { id: string } }) => {
     }
   );
   const json = await res.json();
-  console.log(json);
   // await new Promise((resolve) => setTimeout(resolve, 3000));
-  return <div className=""></div>;
+  return <PageRender pageschema={json.data} />;
 };
 
 export default RenderPage;

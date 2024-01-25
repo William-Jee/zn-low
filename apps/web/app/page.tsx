@@ -12,7 +12,7 @@ import {
 const page = async () => {
   const user = await db.user.findFirst();
   return (
-    <div className="bg-red-400">
+    <div className="bg-red-400 ">
       <p className=""></p>
       {user?.name}
       <p className="font-red ">1122</p>
