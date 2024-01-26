@@ -6,6 +6,8 @@ import { PageContent } from "../lib/ProviderHelper";
 const PageRender = ({ pageschema = {} }: { pageschema: any }) => {
   const setSchema = (state, action) => {
     console.log({ state });
+    console.log({ action });
+    return state;
   };
   const [schema, dispatch] = useReducer(setSchema, pageschema);
   console.log({ schema });
